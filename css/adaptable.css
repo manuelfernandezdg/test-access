@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color-negro:#07020D;
+    --color-blanco:#FFFFFF;
+    --color-blanco-2:#F1E9DB;
+    --color-acento:#5DB7DE;
+    --color-marron1:#A39B8B;
+    --color-marron2:#716A5C;
+}
+
+/* Estilos globales */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: var(--color-negro);
+    background-color: var(--color-blanco-2);
+    margin: 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Listas con Flex*/
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Accesibilidad */
+.sr-only {
+    color: white;
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: -400px;
+}
+
+/* ---------------- Header y Barra de Navegación ---------------- */
+header {
+    background-color:var(--color-negro);
+    text-align: center;
+    padding: 35px 0 20px;
+    border-bottom: 3px solid var(--color-acento);
+}
+
+.contenedor-header {
+    width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Links de la barra de navegación */
+a.nav:link {
+    color: var(--color-blanco-2);
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+a.nav:visited {
+    color: var(--color-blanco-2);
+}
+
+a.nav:hover {
+    color: var(--color-acento);
+}
+
+a.nav:active {
+    color: var(--color-acento);
+}
+
+/* Buscador */
+.busqueda {
+    display: flex;
+    justify-content: center;
+}
+
+.busqueda input,
+.busqueda button {
+    height: 50px;
+    padding: 4px 12px;
+    border: none;
+}
+
+.busqueda input:focus {
+    border: 2px solid var(--color-acento);
+    border-right: none;
+}
+
+.busqueda input {
+    border-radius: 16px 0 0 16px;
+    border: 2px solid var(--color-marron1);
+    border-right: none;
+}
+
+.busqueda button {
+    background-color: var(--color-acento);
+    border-radius: 0 16px 16px 0;
+    border: 2px solid var(--color-marron1);
+    border-left: none;
+    width: 60px;
+}
+
+.busqueda img {
+    width: 100%;
+}
